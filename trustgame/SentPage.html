@@ -1,9 +1,15 @@
 {{ block title }}
-    Page title
+    Trust game
 {{ endblock }}
+
 {{ block content }}
 
+    <p>
+        You are Player 1. Now you have {{ C.ENDOWMENT }}.
+    </p>
+
     {{ formfields }}
+
     {{ next_button }}
 
 {{ endblock }}

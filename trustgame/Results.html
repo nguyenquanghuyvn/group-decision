@@ -3,8 +3,21 @@
 {{ endblock }}
 
 {{ block content }}
+    {{ if player.id_in_group == 1 }}
+        <p>
+            You sent Player 2 {{ group.sent_amount }}.
+            Player 2 returned {{ group.sent_back_amount }}
+        </p>
+    {{ else }}
+        <p>
+            Player 1 sent you {{ group.sent_amount }}.
+            You returned {{ group.sent_back_amount }}.
+        </p>
+    {{ endif }}
 
-    {{ next_button }}
+    <p>
+        Therefore, your payoff is {{ player.payoff }}.
+    </p>
 {{ endblock }}
 
 
